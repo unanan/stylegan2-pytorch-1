@@ -267,6 +267,7 @@ if __name__ == "__main__":
 
     name = os.path.splitext(os.path.basename(args.path))[0]
     torch.save(ckpt, name + ".pt")
+    print(name + ".pt")
 
     batch_size = {256: 16, 512: 9, 1024: 4}
     n_sample = batch_size.get(size, 25)
